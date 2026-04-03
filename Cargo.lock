@@ -70,6 +70,7 @@ checksum = "7f202df86484c868dbad7eaa557ef785d5c66295e41b460ef922eca0723b842c"
 [[package]]
 name = "asdi"
 version = "0.2.5"
+source = "git+https://github.com/mmalecki/rust-asdi.git?branch=remove-run-printlns#e5f7310482f19b67b142409b817e091f62f7bc5e"
 dependencies = [
  "csv",
  "ordered-float",
