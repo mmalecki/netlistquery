@@ -3,11 +3,9 @@ use std::str::FromStr;
 
 use anyhow::Result;
 use asdi::edb::{Attribute, Constant, Predicate};
-use asdi::idb::eval::StratifiedEvaluator;
+use asdi::idb::eval::NaiveEvaluator;
 use asdi::parse::parse_str;
-use asdi::{
-    Collection, Labeled, ProgramCore,
-};
+use asdi::{Collection, Labeled, ProgramCore};
 
 pub mod kicad;
 
@@ -48,11 +46,14 @@ pub fn execute_query(
     let user_query = query.replace(":-", "<-");
 
     let mut header = String::new();
+    let mut user_rules = std::collections::HashSet::new();
     for line in user_query.lines() {
         if let Some(idx) = line.find("<-") {
             let head = line[..idx].trim();
             if let Some(paren_idx) = head.find('(') {
                 let name = &head[..paren_idx];
+                user_rules.insert(name.to_string());
+
                 let args_part = &head[paren_idx + 1..head.len() - 1];
                 let num_args = if args_part.trim().is_empty() {
                     0
@@ -62,9 +63,7 @@ pub fn execute_query(
                 if num_args > 0 {
                     let mut types = Vec::new();
                     for arg in args_part.split(',') {
-                        if arg.trim().to_lowercase().contains("count")
-                            || arg.trim().to_lowercase().contains("num")
-                        {
+                        if arg.trim().to_lowercase().contains("count") {
                             types.push("integer");
                         } else {
                             types.push("string");
@@ -94,7 +93,7 @@ pub fn execute_query(
 
         % Standard library rules (recursive pathfinding)
         .infer path(string, string).
-        path(N, N) <- connected(Pin, N).
+        path(N, N) <- connected(_, N).
         path(A, B) <- series_link(A, I), path(I, B).
         "#
     );
@@ -277,7 +276,7 @@ pub fn execute_query(
     }
 
     program
-        .run(StratifiedEvaluator {}, false)
+        .run(NaiveEvaluator::default(), false)
         .map_err(|e| anyhow::anyhow!("Evaluation failed: {:?}", e))?;
 
     let intensional = program.intensional();
@@ -286,7 +285,7 @@ pub fn execute_query(
     for relation in intensional.iter() {
         let rel_name = relation.label().to_string();
 
-        if rel_name == "path" {
+        if !user_rules.contains(&rel_name) {
             continue;
         }
 
