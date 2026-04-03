@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 dir=$(dirname "$0")
 bin=$(realpath "$dir/../target/debug/netlistquery")
 
@@ -40,6 +39,17 @@ net="$dir/attiny85-imu-led/attiny85-imu-led.net"
 
 # Find pin count of ICs
 "$bin" "$net" '
-pin_u1(Count) :- pin_count("U1", Count).
-pin_u2(Count) :- pin_count("U2", Count).
-' | sort
+    pin_u1(Count) :- pin_count("U1", Count).
+    pin_u2(Count) :- pin_count("U2", Count).' | sort
+
+# Trace the complete electrical path starting from U1's PB1 pin
+# and print every component and pin that signal reaches
+# (automatically jumping over series components like resistors/jumpers).
+# Note: PB1 on U1 is connected via series resistor R4 to D1 DIN.
+"$bin" "$net" 'trace(Comp, PinNum) :-
+    pin(Id1, "U1", _),
+    pin_function(Id1, "PB1_6"),
+    connected(Id1, Net1),
+    path(Net1, PathNet),
+    connected(IdDest, PathNet),
+    pin(IdDest, Comp, PinNum).' | sort
