@@ -1,0 +1,1298 @@
+(export
+	(version "E")
+	(design
+		(source "/home/maciej/dev/rust/netlistquery/examples/attiny85-imu-led/attiny85-imu-led.kicad_sch")
+		(date "2026-04-03T18:33:08")
+		(tool "Eeschema 10.0.0")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company)
+				(rev)
+				(date)
+				(source "attiny85-imu-led.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "1u")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "88c14aec-4819-49a3-967d-f0425b79ec63")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "1u")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5e2af7b5-a818-43c8-ad88-63ef751d42e5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "1u")
+			(description "Unpolarized capacitor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f11b24f0-f107-4ecc-adac-e0aac5e28761")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D1")
+			(value "WS2812B")
+			(footprint "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+			(datasheet "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+			(description "RGB LED with integrated controller")
+			(fields
+				(field
+					(name "Footprint") "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+				(field
+					(name "Datasheet") "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+				(field
+					(name "Description") "RGB LED with integrated controller")
+			)
+			(libsource
+				(lib "LED")
+				(part "WS2812B")
+				(description "RGB LED with integrated controller")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "RGB LED NeoPixel addressable")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5cb95b07-9d7a-431a-8ea7-d01f1f7aa867")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "10k")
+			(description "Resistor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1dfe09b6-adc2-4f11-82bf-54d4f0bb03e9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "10k")
+			(description "Resistor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "df70f24d-540e-4ecd-a299-11ea6770575d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R3")
+			(value "10k")
+			(description "Resistor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "617d76f6-aeaf-4e04-b08d-10ec4b41b2e3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R4")
+			(value "51")
+			(description "Resistor")
+			(fields
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6f39c8c7-48dc-4c47-913d-37c7f1c062df")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "ATtiny85-20S")
+			(footprint "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm")
+			(datasheet "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf")
+			(description "20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-8")
+			(fields
+				(field
+					(name "Footprint") "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm")
+				(field
+					(name "Datasheet") "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf")
+				(field
+					(name "Description") "20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-8")
+			)
+			(libsource
+				(lib "MCU_Microchip_ATtiny")
+				(part "ATtiny85-20S")
+				(description "10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIC-8 (208 mil)")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "AVR 8bit Microcontroller tinyAVR")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "*SOIC*5.3x5.3mm*P1.27mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5e0f0e99-da98-4a30-8b78-f964afa646a4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "LIS3DH")
+			(footprint "Package_LGA:LGA-16_3x3mm_P0.5mm_LayoutBorder3x5y")
+			(datasheet "https://www.st.com/resource/en/datasheet/cd00274221.pdf")
+			(description "3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface, LGA-16")
+			(fields
+				(field
+					(name "Footprint") "Package_LGA:LGA-16_3x3mm_P0.5mm_LayoutBorder3x5y")
+				(field
+					(name "Datasheet") "https://www.st.com/resource/en/datasheet/cd00274221.pdf")
+				(field
+					(name "Description") "3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface, LGA-16")
+			)
+			(libsource
+				(lib "Sensor_Motion")
+				(part "LIS3DH")
+				(description "3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface, LGA-16")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "attiny85-imu-led.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "3-axis accelerometer i2c spi mems")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LGA*3x3mm*P0.5mm*LayoutBorder3x5y*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8f590d03-fbf9-4586-8dfd-ab60e0948651")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "13")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "LED")
+			(part "WS2812B")
+			(description "RGB LED with integrated controller")
+			(docs "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+			(footprints
+				(fp "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "WS2812B")
+				(field
+					(name "Footprint") "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm")
+				(field
+					(name "Datasheet") "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
+				(field
+					(name "Description") "RGB LED with integrated controller")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VDD")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "DOUT")
+					(type "output")
+				)
+				(pin
+					(num "3")
+					(name "VSS")
+					(type "power_in")
+				)
+				(pin
+					(num "4")
+					(name "DIN")
+					(type "input")
+				)
+			)
+		)
+		(libpart
+			(lib "MCU_Microchip_ATtiny")
+			(part "ATtiny85-20S")
+			(description "20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-8")
+			(docs "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf")
+			(footprints
+				(fp "*SOIC*5.3x5.3mm*P1.27mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "ATtiny85-20S")
+				(field
+					(name "Footprint") "Package_SO:SOIC-8_5.3x5.3mm_P1.27mm")
+				(field
+					(name "Datasheet") "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf")
+				(field
+					(name "Description") "20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIC-8")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "~{RESET}/PB5")
+					(type "bidirectional")
+				)
+				(pin
+					(num "2")
+					(name "XTAL1/PB3")
+					(type "bidirectional")
+				)
+				(pin
+					(num "3")
+					(name "XTAL2/PB4")
+					(type "bidirectional")
+				)
+				(pin
+					(num "4")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "5")
+					(name "AREF/PB0")
+					(type "bidirectional")
+				)
+				(pin
+					(num "6")
+					(name "PB1")
+					(type "bidirectional")
+				)
+				(pin
+					(num "7")
+					(name "PB2")
+					(type "bidirectional")
+				)
+				(pin
+					(num "8")
+					(name "VCC")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Sensor_Motion")
+			(part "LIS3DH")
+			(description "3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface, LGA-16")
+			(docs "https://www.st.com/resource/en/datasheet/cd00274221.pdf")
+			(footprints
+				(fp "LGA*3x3mm*P0.5mm*LayoutBorder3x5y*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "LIS3DH")
+				(field
+					(name "Footprint") "Package_LGA:LGA-16_3x3mm_P0.5mm_LayoutBorder3x5y")
+				(field
+					(name "Datasheet") "https://www.st.com/resource/en/datasheet/cd00274221.pdf")
+				(field
+					(name "Description") "3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface, LGA-16")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VDD_IO")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "3")
+					(name "NC")
+					(type "no_connect")
+				)
+				(pin
+					(num "4")
+					(name "SPC")
+					(type "input")
+				)
+				(pin
+					(num "5")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "6")
+					(name "SDI")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "SDO")
+					(type "output")
+				)
+				(pin
+					(num "8")
+					(name "CS")
+					(type "input")
+				)
+				(pin
+					(num "9")
+					(name "INT2")
+					(type "output")
+				)
+				(pin
+					(num "10")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "INT1")
+					(type "output")
+				)
+				(pin
+					(num "12")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "ADC3")
+					(type "input")
+				)
+				(pin
+					(num "14")
+					(name "VDD")
+					(type "power_in")
+				)
+				(pin
+					(num "15")
+					(name "ADC2")
+					(type "input")
+				)
+				(pin
+					(num "16")
+					(name "ADC1")
+					(type "input")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "Device")
+			(uri "${KICAD8_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "LED")
+			(uri "${KICAD8_SYMBOL_DIR}/LED.kicad_sym")
+		)
+		(library
+			(logical "MCU_Microchip_ATtiny")
+			(uri "${KICAD8_SYMBOL_DIR}/MCU_Microchip_ATtiny.kicad_sym")
+		)
+		(library
+			(logical "Sensor_Motion")
+			(uri "${KICAD8_SYMBOL_DIR}/Sensor_Motion.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "+3.3V")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "1")
+				(pinfunction "VDD_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "VCC_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "VDD_IO_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "14")
+				(pinfunction "VDD_14")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "/LED")
+			(class "Default")
+			(node
+				(ref "R4")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "PB1_6")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "3")
+			(name "/SCL")
+			(class "Default")
+			(node
+				(ref "R3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "PB2_7")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "SPC_4")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "4")
+			(name "/SDA")
+			(class "Default")
+			(node
+				(ref "R2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "AREF/PB0_5")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U2")
+				(pin "6")
+				(pinfunction "SDI_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "5")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "3")
+				(pinfunction "VSS_3")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "GND_4")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "10")
+				(pinfunction "GND_10")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "12")
+				(pinfunction "GND_12")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "5")
+				(pinfunction "GND_5")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "6")
+			(name "Net-(D1-DIN)")
+			(class "Default")
+			(node
+				(ref "D1")
+				(pin "4")
+				(pinfunction "DIN_4")
+				(pintype "input")
+			)
+			(node
+				(ref "R4")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "Net-(U1-~{RESET}{slash}PB5)")
+			(class "Default")
+			(node
+				(ref "R1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "~{RESET}/PB5_1")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "8")
+			(name "unconnected-(D1-DOUT-Pad2)")
+			(class "Default")
+			(node
+				(ref "D1")
+				(pin "2")
+				(pinfunction "DOUT_2")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "9")
+			(name "unconnected-(U1-XTAL1{slash}PB3-Pad2)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "XTAL1/PB3_2")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "10")
+			(name "unconnected-(U1-XTAL2{slash}PB4-Pad3)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "XTAL2/PB4_3")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "11")
+			(name "unconnected-(U2-ADC1-Pad16)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "16")
+				(pinfunction "ADC1_16")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "12")
+			(name "unconnected-(U2-ADC2-Pad15)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "15")
+				(pinfunction "ADC2_15")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "13")
+			(name "unconnected-(U2-ADC3-Pad13)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "13")
+				(pinfunction "ADC3_13")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "14")
+			(name "unconnected-(U2-CS-Pad8)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "8")
+				(pinfunction "CS_8")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "15")
+			(name "unconnected-(U2-INT1-Pad11)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "11")
+				(pinfunction "INT1_11")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "16")
+			(name "unconnected-(U2-INT2-Pad9)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "9")
+				(pinfunction "INT2_9")
+				(pintype "output+no_connect")
+			)
+		)
+		(net
+			(code "17")
+			(name "unconnected-(U2-NC-Pad2)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "NC_2")
+				(pintype "no_connect")
+			)
+		)
+		(net
+			(code "18")
+			(name "unconnected-(U2-NC-Pad3)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "NC_3")
+				(pintype "no_connect")
+			)
+		)
+		(net
+			(code "19")
+			(name "unconnected-(U2-SDO-Pad7)")
+			(class "Default")
+			(node
+				(ref "U2")
+				(pin "7")
+				(pinfunction "SDO_7")
+				(pintype "output+no_connect")
+			)
+		)
+	)
+)
