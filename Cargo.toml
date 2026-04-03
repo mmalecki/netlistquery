@@ -8,3 +8,4 @@ anyhow = "1.0.102"
 asdi = { git = "https://github.com/mmalecki/rust-asdi.git", branch = "remove-run-printlns" }
 clap = { version = "4.6.0", features = ["derive"] }
 lexpr = "0.2.7"
+rustyline = "18.0.0"
