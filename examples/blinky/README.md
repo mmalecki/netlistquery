@@ -5,10 +5,10 @@ The board JSON board definitions, generated using:
 
 ```sh
 netlistquery project.net --json 'led(Pin) :-    
-    pin(Id2, "U2", _),
-    pin_feature(Id2, "SDI"),
-    connected(Id2, NetId),
-    connected(Id1, NetId),
+    pin(Id2, "D1", "2"),
+    connected(Id2, NetId2),
+    series_link(NetId2, NetId1),
+    connected(Id1, NetId1),
     pin(Id1, "U1", _),
     pin_function(Id1, Pin).' > board-a.json
 ```
