@@ -3,7 +3,7 @@ name = "netlistquery"
 license = "MIT"
 description = "Library and CLI for querying EDA netlists"
 authors = ["Maciej Małecki <me@mmalecki.com>"]
-version = "0.1.2"
+version = "0.1.2-1"
 edition = "2024"
 
 [dependencies]
