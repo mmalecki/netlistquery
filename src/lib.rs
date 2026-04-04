@@ -45,7 +45,6 @@ pub fn execute_query(
 ) -> Result<HashMap<String, Vec<Vec<Constant>>>> {
     let user_query = query.replace(":-", "<-");
 
-    let mut header = String::new();
     let mut user_rules = std::collections::HashSet::new();
     for line in user_query.lines() {
         if let Some(idx) = line.find("<-") {
@@ -53,34 +52,11 @@ pub fn execute_query(
             if let Some(paren_idx) = head.find('(') {
                 let name = &head[..paren_idx];
                 user_rules.insert(name.to_string());
-
-                let args_part = &head[paren_idx + 1..head.len() - 1];
-                let num_args = if args_part.trim().is_empty() {
-                    0
-                } else {
-                    args_part.split(',').count()
-                };
-                if num_args > 0 {
-                    let mut types = Vec::new();
-                    for arg in args_part.split(',') {
-                        if arg.trim().to_lowercase().contains("count") {
-                            types.push("integer");
-                        } else {
-                            types.push("string");
-                        }
-                    }
-                    let types_str = types.join(", ");
-                    header.push_str(&format!(".infer {}({}).\n", name, types_str));
-                } else {
-                    header.push_str(&format!(".infer {}.\n", name));
-                }
             }
         }
     }
 
     let datalog_source = format!(
-        "{}\n{}\n",
-        header,
         r#"
 
         % Standard library schema
