@@ -389,6 +389,7 @@ dependencies = [
  "clap",
  "lexpr",
  "rustyline",
+ "serde_json",
 ]
 
 [[package]]

@@ -12,3 +12,4 @@ Result: trace(D1, 4)
 Result: trace(R4, 1)
 Result: trace(R4, 2)
 Result: trace(U1, 6)
+{"pin_u1":[[8]],"pin_u2":[[16]]}

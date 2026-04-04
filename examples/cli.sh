@@ -53,3 +53,8 @@ net="$dir/attiny85-imu-led/attiny85-imu-led.net"
     path(Net1, PathNet),
     connected(IdDest, PathNet),
     pin(IdDest, Comp, PinNum).' | sort
+
+# Find pin count of ICs, output as JSON
+"$bin" "$net" --json '
+    pin_u1(Count) :- pin_count("U1", Count).
+    pin_u2(Count) :- pin_count("U2", Count).'

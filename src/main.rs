@@ -3,6 +3,7 @@ use asdi::edb::Constant;
 use clap::Parser;
 use rustyline::DefaultEditor;
 use rustyline::error::ReadlineError;
+use serde_json::{Map, Value, json};
 use std::path::PathBuf;
 
 use netlistquery::{Netlist, execute_query, kicad::parse_kicad_netlist};
@@ -15,25 +16,58 @@ struct Args {
 
     /// The datalog query to execute (e.g., 'find_mcu_pin(MCU_PinName) :- ...'). If omitted, starts a REPL.
     query: Option<String>,
+
+    /// Output the results in JSON format
+    #[arg(long)]
+    json: bool,
 }
 
-fn run_query(netlist: &Netlist, query: &str) {
+fn constant_to_json(c: &Constant) -> Value {
+    match c {
+        Constant::String(s) => Value::String(s.clone()),
+        Constant::Number(n) => {
+            let s = n.to_string();
+            if let Ok(i) = s.parse::<i64>() {
+                json!(i)
+            } else if let Ok(f) = s.parse::<f64>() {
+                json!(f)
+            } else {
+                Value::String(s)
+            }
+        }
+        Constant::Boolean(b) => Value::Bool(*b),
+    }
+}
+
+fn run_query(netlist: &Netlist, query: &str, output_json: bool) {
     match execute_query(netlist, query) {
         Ok(results) => {
-            if results.is_empty() {
-                println!("No results found.");
-            } else {
+            if output_json {
+                let mut map = Map::new();
                 for (rel_name, rows) in results {
+                    let mut json_rows = Vec::new();
                     for row in rows {
-                        let clean_vals: Vec<String> = row
-                            .iter()
-                            .filter_map(|c| match c {
-                                Constant::String(s) => Some(s.clone()),
-                                Constant::Number(n) => Some(n.to_string()),
-                                Constant::Boolean(b) => Some(b.to_string()),
-                            })
-                            .collect();
-                        println!("Result: {}({})", rel_name, clean_vals.join(", "));
+                        json_rows.push(row.iter().map(constant_to_json).collect());
+                    }
+                    map.insert(rel_name, Value::Array(json_rows));
+                }
+                println!("{}", serde_json::to_string(&map).unwrap());
+            } else {
+                if results.is_empty() {
+                    println!("No results found.");
+                } else {
+                    for (rel_name, rows) in results {
+                        for row in rows {
+                            let clean_vals: Vec<String> = row
+                                .iter()
+                                .filter_map(|c| match c {
+                                    Constant::String(s) => Some(s.clone()),
+                                    Constant::Number(n) => Some(n.to_string()),
+                                    Constant::Boolean(b) => Some(b.to_string()),
+                                })
+                                .collect();
+                            println!("Result: {}({})", rel_name, clean_vals.join(", "));
+                        }
                     }
                 }
             }
@@ -68,7 +102,7 @@ fn main() -> Result<()> {
 
     if let Some(query) = args.query {
         // Single-shot execution
-        run_query(&netlist, &query);
+        run_query(&netlist, &query, args.json);
     } else {
         // REPL mode
         println!("Starting interactive Datalog REPL. Type 'exit' or 'quit' to close.");
@@ -102,7 +136,7 @@ fn main() -> Result<()> {
 
                     if buffer.trim().ends_with('.') {
                         rl.add_history_entry(buffer.trim())?;
-                        run_query(&netlist, &buffer);
+                        run_query(&netlist, &buffer, args.json);
                         buffer.clear();
                     }
                 }
@@ -119,4 +153,3 @@ fn main() -> Result<()> {
 
     Ok(())
 }
-
