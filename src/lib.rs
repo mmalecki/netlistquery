@@ -84,14 +84,21 @@ pub fn execute_query(
         r#"
 
         % Standard library schema
+        % pin(PinId, Component, PinNumber)
         .assert pin(string, string, string).
+        % pin_function(PinId, PinNumber)
         .assert pin_function(string, string).
+        % pin_feature(PinId, PinNumber)
         .assert pin_feature(string, string).
+        % connected(Pin, Net)
         .assert connected(string, string).
+        % series_link(Net, Net)
         .assert series_link(string, string).
+        % pin_count(Component, Count)
         .assert pin_count(string, integer).
 
         % Standard library rules (recursive pathfinding)
+        % path(Net, Net)
         .infer path(string, string).
         path(N, N) <- connected(_, N).
         path(A, B) <- series_link(A, I), path(I, B).
