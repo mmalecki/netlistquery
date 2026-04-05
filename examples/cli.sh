@@ -22,10 +22,10 @@ net="$dir/attiny85-imu-led/attiny85-imu-led.net"
 # Find components connected to "SDA" net *and* +3.3V -
 # should find pull ups and bus actors.
 "$bin" "$net" 'bus_actors(Component) :-
-    pin(Pin_A, Component, _),
-    connected(Pin_A, "+3.3V"),
-    pin(Pin_B, Component, _),
-    connected(Pin_B, "/SDA").' | sort
+    pin(Id1, Component, _),
+    connected(Id1, "+3.3V"),
+    pin(Id2, Component, _),
+    connected(Id2, "/SDA").' | sort
 
 # Find pin_function of U1 pin connected through resistor to DIN of D1
 "$bin" "$net" 'mcu_pin(Pin) :-
@@ -40,8 +40,8 @@ net="$dir/attiny85-imu-led/attiny85-imu-led.net"
 # Find 2 pin components that span between +3.3V and GND (e.g. bypass capacitors)
 "$bin" "$net" 'power_components(Comp) :-
     pin_count(Comp, 2),
-    pin(IdA, Comp, _), connected(IdA, "+3.3V"),
-    pin(IdB, Comp, _), connected(IdB, "GND").' | sort
+    pin(Id1, Comp, _), connected(Id1, "+3.3V"),
+    pin(Id2, Comp, _), connected(Id2, "GND").' | sort
 
 # Find pin count of ICs
 "$bin" "$net" '
