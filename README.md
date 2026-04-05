@@ -61,6 +61,21 @@ Result: mcu_pin(AREF/PB0_5)
 There are more example queries in [`examples/cli.sh`](examples/cli.sh).
 `netlistquery` also supports series connections between nets, e.g. via resistors.
 
+### Standard library
+
+#### `pin(PinId: string, Component: string, PinNumber: string)`
+
+#### `pin_function(PinId: string, PinFunction: string)`
+
+#### `pin_feature(PinId: string, PinFeature: string)`
+
+#### `pin_count(Component: string, Count: number)`
+
+#### `connected(PinId, Net: string)`
+
+#### `series_link(NetA: string, NetB: string)`
+
+
 ### REPL
 If you'd like to explore a netlist, or just play around with `netlistquery`, you can
 start it as a REPL:
