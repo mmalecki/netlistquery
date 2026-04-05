@@ -3,6 +3,7 @@ name = "netlistquery"
 license = "MIT"
 description = "Library and CLI for querying EDA netlists"
 authors = ["Maciej Małecki <me@mmalecki.com>"]
+keywords = ["embedded", "eda", "kicad", "netlist", "board-support-package"]
 version = "0.1.2-2"
 edition = "2024"
 
