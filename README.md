@@ -6,8 +6,11 @@ to the EN pin of my IMU", or "how many decoupling capacitors are in my schematic
 Queries are written in a Datalog format.
 
 ## Installation
+For now, due to some upstream depedencies needing to be installed from a git fork,
+it is recommended to install `netlistquery` from the git repository:
+
 ```sh
-cargo install netlistquery
+cargo install --git https://github.com/mmalecki/netlistquery.git netlistquery
 ```
 
 ## Usage
