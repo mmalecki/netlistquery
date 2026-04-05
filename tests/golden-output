@@ -1,3 +1,4 @@
+Result: mcu_pin(PB2_7)
 Result: mcu_pin(AREF/PB0_5)
 Result: bus_actors(R2)
 Result: bus_actors(U1)

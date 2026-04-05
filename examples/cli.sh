@@ -4,6 +4,12 @@ bin=$(realpath "$dir/../target/debug/netlistquery")
 
 net="$dir/attiny85-imu-led/attiny85-imu-led.net"
 
+# Find pin function of the MCU (U1) pin connected to /SCL net.
+"$bin" "$net" 'mcu_pin(Pin) :-
+    pin(Id, "U1", _),
+    connected(Id, "/SCL"),
+    pin_function(Id, Pin).' | sort
+
 # Find pin function of the MCU (U1) pin connected to U2's SDI pin.
 "$bin" "$net" 'mcu_pin(Pin) :-
     pin(Id2, "U2", _),
